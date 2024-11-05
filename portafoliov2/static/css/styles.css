@@ -1,0 +1,100 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+    background-color: #49310c;
+    color: white;
+    padding: 10px 20px;
+}
+
+nav a {
+    color: rgb(255, 255, 255);
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+main { /*flex: 1 en main: hace que el main ocupe el espacio q falta, empujando el footer hacia abajo solamente si el contenido no es suficiente.*/
+    flex: 1;
+    padding: 20px;
+}                                      /*onda, esto lo tuve q hacer porq mi footer aparecia en la mitad de la pantalla cuando agregue mis redes sociales, no tengo idea por q*/
+html, body {
+    height: 100%;
+    margin: 0;
+}
+.wrapper {    /*.wrapper con min-height: 100vh y flex-direction: column: hace que el footer este siempre en la parte de abajo, empujado por main.*/
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.content {
+    flex: 1;  
+}
+ /*desde aca es solamente redes sociales y footer*/
+footer {
+    background-color: #49310c;;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+  }
+  .social-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .social-links li {
+    display: inline;
+    margin: 0 10px;
+  }
+  
+  .social-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+  }
+  
+  .social-links a:hover {
+    color: #1da1f2; /* para cambiar el color cuando paso el maouse arriba */
+  } /*hasta aca footer y rs*/
+
+/* codigo para el modo oscuro */
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+body.dark-mode header {
+    background-color: #1f1f1f;
+}
+
+body.dark-mode nav a {
+    color: #e0e0e0;
+}
+
+body.dark-mode footer {
+    background-color: #1f1f1f;
+    color: #e0e0e0;
+}
+
+button {
+    background-color: #2c1d07;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.8;
+}
